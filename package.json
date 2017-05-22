@@ -1,0 +1,27 @@
+{
+  "name": "flexi-color-picker",
+  "version": "1.0.0",
+  "description": "A pure JavaScript color picker - no images, external libraries, CSS or 1px divs.",
+  "main": "colorpicker.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slidebean/FlexiColorPicker.git"
+  },
+  "keywords": [
+    "color",
+    "picker"
+  ],
+  "author": "Slidebean, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slidebean/FlexiColorPicker/issues"
+  },
+  "homepage": "https://github.com/slidebean/FlexiColorPicker#readme"
+}
