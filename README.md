@@ -1,3 +1,6 @@
+
+[![](https://img.shields.io/badge/-git--secrets-blue?logo=amazon-aws)](#)
+
 Demo & discussion
 =================
 
@@ -27,7 +30,7 @@ the **slider** for selecting _hue_ value and the **picker** for selecting _satur
 the **slider** and **picker** are HTML elements (usually `<div>`'s) that serve as wrappers for SVG/VML gradient
 rectangles. The **slider** gradient rectangle represents the _hue_ value (gradient with 9 `stop-color`s). The
 two overlapping black and white gradient rectangles of the **picker** represent the _saturation_ and _value_ values.
-The top level elements (`<svg>` in case of SVG enabled browser and `<div>` in case of VML enabled browser) 
+The top level elements (`<svg>` in case of SVG enabled browser and `<div>` in case of VML enabled browser)
 that wrap each of the **slider** and **picker** gradient rectangles have set `width` and `height` to `100%` which
 means that the color picker components (slider and picker) adjust themselfs automatically to the dimensions of the **slider** and **picker**
 HTML elements.
@@ -89,17 +92,17 @@ If you use the no-hassle form (see above), you don't have to deal with this func
 Example:
 
                 ColorPicker(
-                        document.getElementById('slider'), 
-                        document.getElementById('picker'), 
+                        document.getElementById('slider'),
+                        document.getElementById('picker'),
 
                         function(hex, hsv, rgb, pickerCoordinate, sliderCoordinate) {
-        
+
                             ColorPicker.positionIndicators(
                                 document.getElementById('slider-indicator'),
                                 document.getElementById('picker-indicator'),
                                 sliderCoordinate, pickerCoordinate
                             );
-        
+
                             document.body.style.backgroundColor = hex;
                     });
 
@@ -156,7 +159,7 @@ Basic
             </html>
 
 
-Note that you can set arbitrary dimensions, position, border and other CSS properties on the slider and picker 
+Note that you can set arbitrary dimensions, position, border and other CSS properties on the slider and picker
 elements as you would do with any other HTML element on the page.
 
 
@@ -169,7 +172,7 @@ This is an advanced example showing how to work with custom indicators.
           <head>
             <script type="text/javascript" src="../colorpicker.js"></script>
             <style type="text/css">
-        
+
                 #picker-wrapper {
                     width: 200px;
                     height: 200px;
@@ -195,7 +198,7 @@ This is an advanced example showing how to work with custom indicators.
             </style>
           </head>
           <body>
-        
+
               <div id="picker-wrapper">
                   <div id="picker"></div>
                   <div id="picker-indicator"></div>
@@ -204,28 +207,28 @@ This is an advanced example showing how to work with custom indicators.
                   <div id="slider"></div>
                   <div id="slider-indicator"></div>
               </div>
-        
+
               <script type="text/javascript">
-        
+
                 ColorPicker.fixIndicators(
                         document.getElementById('slider-indicator'),
                         document.getElementById('picker-indicator'));
-        
+
                 ColorPicker(
-                        document.getElementById('slider'), 
-                        document.getElementById('picker'), 
+                        document.getElementById('slider'),
+                        document.getElementById('picker'),
 
                         function(hex, hsv, rgb, pickerCoordinate, sliderCoordinate) {
-        
+
                             ColorPicker.positionIndicators(
                                 document.getElementById('slider-indicator'),
                                 document.getElementById('picker-indicator'),
                                 sliderCoordinate, pickerCoordinate
                             );
-        
+
                             document.body.style.backgroundColor = hex;
                     });
-        
+
               </script>
           </body>
         </html>
@@ -233,7 +236,7 @@ This is an advanced example showing how to work with custom indicators.
 
 
 Note how the indicators work. There is no built-in indicators in FlexiColorPicker, instead, the user
-has a freedom to set their own indicators as normal HTML elements styled in CSS (or use one of the ready-to-use themes packaged with FlexiColorPicker). 
+has a freedom to set their own indicators as normal HTML elements styled in CSS (or use one of the ready-to-use themes packaged with FlexiColorPicker).
 
 
 No hassle
@@ -248,21 +251,21 @@ If you don't want to deal with any of the above mentioned details and you're jus
             <link rel="stylesheet" type="text/css" href="../themes.css" />
           </head>
           <body>
-        
+
             <div id="color-picker" class="cp-default"></div>
-        
+
             <script type="text/javascript">
-        
+
               ColorPicker(
-        
+
                 document.getElementById('color-picker'),
-        
+
                 function(hex, hsv, rgb) {
                     console.log(hsv.h, hsv.s, hsv.v);         // [0-359], [0-1], [0-1]
                     console.log(rgb.r, rgb.g, rgb.b);         // [0-255], [0-255], [0-255]
                     document.body.style.backgroundColor = hex;        // #HEX
                 });
-        
+
             </script>
           </body>
         </html>
@@ -277,11 +280,11 @@ License
 
 FlexiColorPicker is licensed under the MIT license:
 
-Copyright (c) 2011 - 2012 David Durman 
+Copyright (c) 2011 - 2012 David Durman
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
